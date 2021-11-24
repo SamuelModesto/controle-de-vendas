@@ -1,6 +1,8 @@
 package com.samuel.vendas.services;
 
 import com.samuel.vendas.dto.SaleDTO;
+import com.samuel.vendas.dto.SaleSuccessDTO;
+import com.samuel.vendas.dto.SaleSumDTO;
 import com.samuel.vendas.entities.Sale;
 import com.samuel.vendas.repositories.SaleRepository;
 import com.samuel.vendas.repositories.SellerRepository;
@@ -27,8 +29,15 @@ public class SaleService {
         sellerRepository.findAll();//JPA ARMAZENA OS VENDEDORE NA CASH AUTOMÁTICAMENTE
         Page<Sale> sales = repository.findAll(pageable);
         return sales.map(e -> new SaleDTO(e));
-
     }
 
+    @Transactional(readOnly = true)
+    public List<SaleSumDTO> amountGroupedBySeller(){
+        return repository.amountGroupedBySeller();
+    }
 
+    @Transactional(readOnly = true)
+    public List<SaleSuccessDTO> successGroupedBySeller(){
+        return repository.successGroupedBySeller();
+    }
 }
