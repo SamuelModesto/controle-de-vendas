@@ -17,9 +17,13 @@
 
 ## Sobre o Projeto
 
+### Arquitetura
 
+<div>
+<img src="https://user-images.githubusercontent.com/50465758/160259865-3bb43b80-8e66-497a-b057-67d2521489a8.png" width="600px" />
+</div>
 
-## Starting
+## Iniciando
 
 
 ### Como usar
