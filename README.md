@@ -9,6 +9,7 @@
 
 - [Conteúdo](#table-of-contents)
 - [Sobre o projeto](#about-project)
+  - [Arquitetura](#arch-project)
 - [Iniciando](#starting)
   - [Como usar](#how-to-use)
 - [Contribuindo](#contributing)
