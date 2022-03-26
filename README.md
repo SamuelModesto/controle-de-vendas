@@ -5,16 +5,16 @@
 
 <!-- TABLE OF CONTENTS -->
 
-## Table of Contents
+## Conteúdo
 
-- [Conteúdo](#table-of-contents)
+- [Conteúdo](#Conteúdo)
 - [Sobre o projeto](#Sobre-o-Projeto)
-  - [Arquitetura](#arch-project)
-- [Iniciando](#starting)
-  - [Como usar](#how-to-use)
-- [Contribuindo](#contributing)
-- [Licensa](#license)
-- [Contato](#contact)
+  - [Arquitetura](#Arquitetura)
+- [Iniciando](#Iniciando)
+  - [Como usar](#Como-usar)
+- [Contribuindo](#Contribuindo)
+- [Licensa](#Licensa)
+- [Contato](#Contato)
 
 ## Sobre o Projeto
 
