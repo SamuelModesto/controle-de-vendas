@@ -8,7 +8,7 @@
 ## Table of Contents
 
 - [Conteúdo](#table-of-contents)
-- [Sobre o projeto](#about-project)
+- [Sobre o projeto](#Sobre-o-Projeto)
   - [Arquitetura](#arch-project)
 - [Iniciando](#starting)
   - [Como usar](#how-to-use)
