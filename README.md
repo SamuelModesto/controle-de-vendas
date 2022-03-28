@@ -42,7 +42,7 @@ As contribuições são o que tornam a comunidade de código aberto um lugar inc
 5. Faça um push da sua branch (`git push origin feature/amazing-feature`)
 6. Abra um Pull Request
 
-## Licensa
+## Licença
 
 Distribuído sob a licença do MIT. Consulte `LICENSE` para obter mais informações.
 
