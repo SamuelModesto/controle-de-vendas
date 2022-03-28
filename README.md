@@ -28,6 +28,10 @@
 
 
 ### Como usar
+ 1- Baixe o projeto.
+ 2- Abra o projeto na IDE de sua preferência.
+ 3- Inicialize a classe VendasApplication.
+ 4- Acesse o arquivo application.properties para informações de acesso ao banco de dados H2.
 
 
 
