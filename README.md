@@ -13,7 +13,7 @@
 - [Iniciando](#Iniciando)
   - [Como usar](#Como-usar)
 - [Contribuindo](#Contribuindo)
-- [Licensa](#Licensa)
+- [Licença](#Licença)
 - [Contato](#Contato)
 
 ## Sobre o Projeto
