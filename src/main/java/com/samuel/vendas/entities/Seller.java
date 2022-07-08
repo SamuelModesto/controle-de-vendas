@@ -1,18 +1,13 @@
 package com.samuel.vendas.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@Data
 @Entity
 @Table(name = "tb_sellers")
 public class Seller {
@@ -20,6 +15,8 @@ public class Seller {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(nullable = false, unique = true, length = 50)
     private String name;
 
     @OneToMany(mappedBy = "seller")
