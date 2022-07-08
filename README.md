@@ -1,6 +1,7 @@
 <br />
 <p align="center">
-  <h3 align="center">Controle de vendas: Projeto backend da semana DEV-SUPERIOR.</h3>
+  <h3 align="center">Controle de vendas: Projeto backend da semana DEV-SUPERIOR as melhorias
+a partir do dia 08/07/2022 são de autoria própria e não fazem parte da semana DEV-SUPERIOR.</h3>
 </p>
 
 <!-- TABLE OF CONTENTS -->
