@@ -1,0 +1,1 @@
+alter table tb_sales add amount double;
