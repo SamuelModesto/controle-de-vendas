@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,7 +39,7 @@ public class SellerController {
 
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Seller save(@RequestBody Seller seller) {
+    public Seller save(@Valid @RequestBody Seller seller) {
         return sellerRepository.save(seller);
     }
 
