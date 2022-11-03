@@ -19,7 +19,7 @@ public class Seller {
     @Column(nullable = false, unique = true, length = 50)
     private String name;
 
-    @OneToMany(mappedBy = "seller")
-    private List<Sale> sales = new ArrayList<>();
+//    @OneToMany(mappedBy = "seller")
+//    private List<Sale> sales = new ArrayList<>();
 
 }

@@ -4,7 +4,6 @@ import com.samuel.vendas.dto.SaleDTO;
 import com.samuel.vendas.dto.SaleSuccessDTO;
 import com.samuel.vendas.dto.SaleSumDTO;
 import com.samuel.vendas.services.SaleService;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
