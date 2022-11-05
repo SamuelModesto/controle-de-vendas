@@ -4,7 +4,6 @@ import com.samuel.vendas.dto.SellerDTO;
 import com.samuel.vendas.entities.Seller;
 import com.samuel.vendas.repositories.SellerRepository;
 import com.samuel.vendas.services.SellerService;
-import lombok.Value;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,21 +11,20 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/sellers")
 public class SellerController {
 
     @Autowired
-    private SellerService service;
+    private SellerService sellerService;
 
     @Autowired
     private SellerRepository sellerRepository;
 
     @GetMapping
     public ResponseEntity<List<SellerDTO>> findAll() {
-        List<SellerDTO> list = service.findAll();
+        List<SellerDTO> list = sellerService.findAll();
         return ResponseEntity.ok(list);
     }
 
@@ -40,7 +38,7 @@ public class SellerController {
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Seller save(@Valid @RequestBody Seller seller) {
-        return sellerRepository.save(seller);
+        return sellerService.salvar(seller);
     }
 
     @PutMapping("/update/{id}")
@@ -58,7 +56,7 @@ public class SellerController {
         if (!sellerRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
-        sellerRepository.deleteById(id);
+        sellerService.excluir(id);
         return ResponseEntity.noContent().build();
     }
 }
