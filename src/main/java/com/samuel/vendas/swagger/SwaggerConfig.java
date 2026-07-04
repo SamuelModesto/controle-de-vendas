@@ -1,45 +1,28 @@
 package com.samuel.vendas.swagger;
 
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.info.License;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
-import springfox.documentation.service.ApiInfo;
-import springfox.documentation.service.Contact;
-import springfox.documentation.service.VendorExtension;
-import springfox.documentation.spi.DocumentationType;
-import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-import java.util.ArrayList;
 
 @Configuration
-@EnableSwagger2
 public class SwaggerConfig {
 
     @Bean
-    public Docket ContaApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.samuel.vendas"))
-                .paths(PathSelectors.any())
-                .build()
-                .apiInfo(metaInfo());
-    }
-
-    private ApiInfo metaInfo() {
-
-        ApiInfo apiInfo = new ApiInfo(
-                "Controle de vendas API",
-                "API de vendedores e vendas.",
-                "1.0",
-                "Terms of Service",
-                new Contact("Samuel Modesto", "https://www.linkedin.com/in/samuelmodesto/",
-                        "samuelmodestoes@gmail.com"),
-                "Apache License Version 2.0",
-                "https://www.apache.org/licesen.html", new ArrayList<VendorExtension>()
-        );
-
-        return apiInfo;
+    public OpenAPI contaApi() {
+        return new OpenAPI().info(new Info()
+                .title("Controle de vendas API")
+                .description("API de vendedores e vendas.")
+                .version("1.0")
+                .contact(new Contact()
+                        .name("Samuel Modesto")
+                        .url("https://www.linkedin.com/in/samuelmodesto/")
+                        .email("samuelmodestoes@gmail.com"))
+                .license(new License()
+                        .name("Apache License Version 2.0")
+                        .url("https://www.apache.org/licenses/LICENSE-2.0")));
     }
 }
+
